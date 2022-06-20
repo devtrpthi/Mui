@@ -2,8 +2,15 @@ import React from "react";
 import {Typography,AppBar, Card, CardActions, CardContent, CssBaseline,Grid,Toolbar,Container} from '@mui/material';
 import { PhotoCamera } from "@mui/icons-material";
 import { Button } from '@mui/material';
+import { makeStyles } from '@material-ui/styles'; 
 
+const useStyles = makeStyles((theme)=> ( {
+    container:{
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(8,0,6)
+    }
 
+}));
 
 function App() {
     return(
@@ -18,7 +25,7 @@ function App() {
                 </Toolbar>
             </AppBar>    
             <main>
-                <div>
+                <div className="classes.container">
                     <Container maxwidth="sm" style={{marginTop: '200px'}}>
                         <Typography variant="h2" align="center" gutterBottom>
                             Photo Album 
